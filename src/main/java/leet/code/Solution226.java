@@ -1,6 +1,5 @@
 package leet.code;
 
-import BST.BST2;
 
 import java.util.LinkedList;
 
