@@ -50,6 +50,24 @@ public class Solution652 {
         mamo.put(subTree, freq + 1);
         return subTree;
     }
-
+public boolean findTarget2(TreeNode root, int k) {
+        Set<Integer> set = new HashSet<>();
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            if (q.peek() != null) {
+                TreeNode node = q.remove();
+                if (set.contains(k - node.val)) {
+                    return true;
+                }
+                set.add(node.val);
+                q.add(node.right);
+                q.add(node.left);
+            } else {
+                q.remove();
+            }
+        }
+        return false;
+    }
 
 }
