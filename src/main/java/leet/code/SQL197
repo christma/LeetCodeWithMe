@@ -1,0 +1,7 @@
+select w.id  from
+    Weather as w
+        join
+    Weather as e
+    on DATEDIFF(w.recordDate ,e.recordDate) = 1 and w.Temperature > e.Temperature
+
+

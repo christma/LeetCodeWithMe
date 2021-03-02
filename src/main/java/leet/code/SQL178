@@ -1,0 +1,1 @@
+select Score, DENSE_RANK()over(order by Score desc ) as 'Rank' from Scores;
