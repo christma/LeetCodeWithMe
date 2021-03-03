@@ -1,24 +1,5 @@
-package com.spring.leetCode;
+package leet.code;
 
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
 
 class Solution450 {
     public TreeNode deleteNode(TreeNode root, int key) {
