@@ -1,4 +1,4 @@
-package leet.code.algorithm.junior;
+package leet.code.algorithm.junior.array;
 
 public class Solution11 {
 

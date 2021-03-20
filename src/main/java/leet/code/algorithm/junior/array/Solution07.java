@@ -1,4 +1,4 @@
-package leet.code.algorithm.junior;
+package leet.code.algorithm.junior.array;
 
 /**
  * 输入: [0,1,0,3,12]
