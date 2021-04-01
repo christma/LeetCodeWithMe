@@ -1,4 +1,4 @@
-package com.spring.leetCode;
+package leet.code;
 
 
 public class JSolution26 {

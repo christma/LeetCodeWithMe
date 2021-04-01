@@ -1,4 +1,4 @@
-package com.spring.leetCode;
+package leet.code;
 
 public class JSolution_55 {
     public class TreeNode {

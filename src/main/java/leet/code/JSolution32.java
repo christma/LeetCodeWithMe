@@ -1,4 +1,4 @@
-package com.spring.leetCode;
+package leet.code;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
