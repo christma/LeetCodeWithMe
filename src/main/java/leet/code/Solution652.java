@@ -1,9 +1,6 @@
-package com.spring.leetCode;
+package leet.code;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Solution652 {
     public static class TreeNode {

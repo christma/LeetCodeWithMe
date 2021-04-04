@@ -1,6 +1,15 @@
 package leet.code;
 
 public class JSolution24 {
+    static class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
+
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
