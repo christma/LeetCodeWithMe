@@ -1,6 +1,5 @@
-package tencent.linkedlist;
+package leet.code.algorithm.junior.tencent.linkedlist;
 
-import com.google.inject.internal.cglib.core.$Customizer;
 
 public class Solution03 {
     static class ListNode {
