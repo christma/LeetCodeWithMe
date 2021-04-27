@@ -41,6 +41,28 @@ public class Solution938 {
             }
 
         }
+        public int rangeSumBST1(TreeNode root, int low, int high) {
+        int sum = 0;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            if (node == null) {
+                continue;
+            }
+            if (node.val > high) {
+                queue.offer(node.left);
+            } else if (node.val < low) {
+                queue.offer(node.right);
+            } else {
+                sum += node.val;
+                queue.offer(node.left);
+                queue.offer(node.right);
+            }
+
+        }
+        return sum;
+    }
 
 
     }
