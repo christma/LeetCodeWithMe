@@ -15,8 +15,29 @@ public class Solution03 {
         }
     }
 
+
+    public void rotate1(int[] nums, int k) {
+        int length = nums.length;
+        k %= length;
+        reverse(nums, 0, length - 1);
+        reverse(nums, 0, k-1);
+        reverse(nums, k, length - 1);
+    }
+
+    private void reverse(int[] nums, int left, int right) {
+        while (left < right) {
+            int temp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = temp;
+            left++;
+            right--;
+
+        }
+    }
+
+
     public static void main(String[] args) {
-        int nums[] = {1, 2, 3, 4, 5, 6, 7};
-        new Solution03().rotate(nums, 3);
+        int nums[] = {1, 2, 3};
+        new Solution03().rotate1(nums, 3);
     }
 }
