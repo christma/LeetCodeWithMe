@@ -40,4 +40,15 @@ public class Solution03 {
         node.next = null;
         return demmyHead;
     }
+
+    public ListNode reverseList1(ListNode head) {
+        ListNode newNode = null;
+        while (head != null) {
+            ListNode temp = head.next;
+            head.next = newNode;
+            newNode = head;
+            head = temp;
+        }
+        return newNode;
+    }
 }
