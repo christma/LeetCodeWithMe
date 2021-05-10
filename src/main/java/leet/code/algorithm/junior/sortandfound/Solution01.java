@@ -1,4 +1,4 @@
-package algorithm.junior.sortandfound;
+package leet.code.algorithm.junior.sortandfound;
 
 public class Solution01 {
     public void merge(int[] nums1, int m, int[] nums2, int n) {

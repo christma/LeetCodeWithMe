@@ -1,4 +1,4 @@
-package algorithm.junior.sortandfound;
+package leet.code.algorithm.junior.sortandfound;
 
 public class Solution02 {
     public int firstBadVersion(int n) {
