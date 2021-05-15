@@ -1,6 +1,6 @@
 package leet.code.algorithm.junior.dynamic2;
 
-public class Solution {
+public class Solution03 {
     public int maxSubArray(int[] nums) {
 
         int length = nums.length;
