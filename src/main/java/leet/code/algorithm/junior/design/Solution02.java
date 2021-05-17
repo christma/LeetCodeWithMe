@@ -1,4 +1,4 @@
-package algorithm.junior.design;
+package leet.code.algorithm.junior.design;
 
 public class Solution02 {
 
