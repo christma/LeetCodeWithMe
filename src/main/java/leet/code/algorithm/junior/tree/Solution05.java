@@ -1,4 +1,4 @@
-package algorithm.junior.tree;
+package leet.code.algorithm.junior.tree;
 
 public class Solution05 {
     static class TreeNode {
