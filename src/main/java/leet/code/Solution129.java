@@ -25,6 +25,7 @@ public class Solution129 {
     public int sumNumbers(TreeNode root) {
         dfs(root, 0);
         return sum;
+
     }
 
     private void dfs(TreeNode root, int cur) {
