@@ -25,10 +25,14 @@ public class JSolution32 {
         List<List<Integer>> ans = new ArrayList<>();
         queue.offer(root);
         while (!queue.isEmpty()) {
-            List<Integer> tmp = new ArrayList<>();
+            LinkedList<Integer> tmp = new LinkedList<>();
             for (int i = queue.size(); i > 0; i--) {
                 TreeNode node = queue.poll();
-                tmp.add(node.val);
+                if(ans.size() % 2 ==0){
+                    tmp.addLast(node.val);
+                }else {
+                    tmp.addFirst(node.val);
+                }
                 if (node.left != null) {
                     queue.offer(node.left);
                 }
