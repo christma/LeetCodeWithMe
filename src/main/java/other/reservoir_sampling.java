@@ -4,6 +4,7 @@ import java.util.Random;
 
 /**
  * 水塘采样
+ * 2021-06-05
  */
 public class reservoir_sampling {
     public static void main(String[] args) {
