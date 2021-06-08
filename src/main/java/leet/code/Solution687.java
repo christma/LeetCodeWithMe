@@ -1,4 +1,4 @@
-package leet.code.algorithm.junior;
+package leet.code;
 
 public class Solution687 {
     class TreeNode {
