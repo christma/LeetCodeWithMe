@@ -1,7 +1,10 @@
-package com.spring.leetCode;
+package leet.code;
+
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Solution938 {
-    public class TreeNode {
+    static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -41,28 +44,28 @@ public class Solution938 {
             }
 
         }
-        public int rangeSumBST1(TreeNode root, int low, int high) {
-        int sum = 0;
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            if (node == null) {
-                continue;
-            }
-            if (node.val > high) {
-                queue.offer(node.left);
-            } else if (node.val < low) {
-                queue.offer(node.right);
-            } else {
-                sum += node.val;
-                queue.offer(node.left);
-                queue.offer(node.right);
-            }
-
-        }
-        return sum;
-    }
+//        public int rangeSumBST1(TreeNode root, int low, int high) {
+//        int sum = 0;
+//        Queue<TreeNode> queue = new LinkedList<>();
+//        queue.offer(root);
+//        while (!queue.isEmpty()) {
+//            TreeNode node = queue.poll();
+//            if (node == null) {
+//                continue;
+//            }
+//            if (node.val > high) {
+//                queue.offer(node.left);
+//            } else if (node.val < low) {
+//                queue.offer(node.right);
+//            } else {
+//                sum += node.val;
+//                queue.offer(node.left);
+//                queue.offer(node.right);
+//            }
+//
+//        }
+//        return sum;
+//    }
 
 
     }
