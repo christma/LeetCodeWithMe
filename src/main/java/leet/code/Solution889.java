@@ -17,11 +17,13 @@ public class Solution889 {
         int n = pre.length;
         if (n == 0) {
             return null;
+
+
         }
         TreeNode root = new TreeNode(pre[0]);
         if (n == 1) {
             return root;
-            
+
         }
 
         int L = 0;
