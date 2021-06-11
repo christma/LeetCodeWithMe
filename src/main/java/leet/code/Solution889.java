@@ -21,6 +21,7 @@ public class Solution889 {
         TreeNode root = new TreeNode(pre[0]);
         if (n == 1) {
             return root;
+            
         }
 
         int L = 0;
