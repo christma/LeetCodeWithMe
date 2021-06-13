@@ -1,6 +1,7 @@
 package leet.code;
 
 public class Solution1008 {
+
     static class TreeNode {
         int val;
         TreeNode left;
