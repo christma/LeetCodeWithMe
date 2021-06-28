@@ -22,7 +22,7 @@ public class Solution105 {
         }
     }
 
-    private Map<Integer, Integer> indexMap;
+    private Map<Integer, Integer> indexMap  = new HashMap<>();
 
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         int n = preorder.length;
