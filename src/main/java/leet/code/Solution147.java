@@ -21,7 +21,7 @@ public class Solution147 {
 
     public ListNode insertionSortList(ListNode head) {
         if (head == null) {
-            return null;
+            return head;
         }
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
@@ -30,7 +30,7 @@ public class Solution147 {
             if (lastSorted.val <= curr.val) {
                 lastSorted = lastSorted.next;
             } else {
-                ListNode prev = lastSorted;
+                ListNode prev = dummyHead;
                 while (prev.next.val <= curr.val) {
                     prev = prev.next;
                 }
@@ -38,7 +38,7 @@ public class Solution147 {
                 curr.next = prev.next;
                 prev.next = curr;
             }
-            curr = lastSorted;
+            curr = lastSorted.next;
         }
         return dummyHead.next;
 
