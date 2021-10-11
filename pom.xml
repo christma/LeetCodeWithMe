@@ -8,30 +8,91 @@
     <artifactId>LeetCodeWithMe</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <project.build.targetJdk>1.8</project.build.targetJdk>
+        <air.check.skip-extended>true</air.check.skip-extended>
+        <air.check.skip-license>false</air.check.skip-license>
+        <air.check.fail-checkstyle>true</air.check.fail-checkstyle>
+        <air.check.skip-checkstyle>false</air.check.skip-checkstyle>
+
+        <air.test.parallel>methods</air.test.parallel>
+        <air.test.thread-count>4</air.test.thread-count>
+        <air.test.jvmsize>2G</air.test.jvmsize>
+    </properties>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>sonatype-nexus-staging</id>
+            <name>Nexus Release Repository</name>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
+
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.12.0</version>
+            <groupId>org.xerial.snappy</groupId>
+            <artifactId>snappy-java</artifactId>
+            <version>1.1.7.3</version>
+            <scope>test</scope>
         </dependency>
+
+
+
+
+
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-math3</artifactId>
-            <version>3.6.1</version>
+            <groupId>org.lz4</groupId>
+            <artifactId>lz4-java</artifactId>
+            <version>1.7.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.luben</groupId>
+            <artifactId>zstd-jni</artifactId>
+            <version>1.4.9-1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.anarres.lzo</groupId>
+            <artifactId>lzo-hadoop</artifactId>
+            <version>1.0.6</version>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.hadoop</groupId>
+                    <artifactId>hadoop-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>jsr305</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.google.code.findbugs</groupId>
+                    <artifactId>annotations</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>com.facebook.presto.hadoop</groupId>
+            <artifactId>hadoop-apache2</artifactId>
+            <version>0.3</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.iq80.snappy</groupId>
+            <artifactId>snappy</artifactId>
+            <version>0.4</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 
 </project>
