@@ -3,20 +3,18 @@ package leet.code;
 public class Solution912 {
 
     int[] temp;
-
     public int[] sortArray(int[] nums) {
         temp = new int[nums.length];
         sortArray(nums, 0, nums.length - 1);
         return nums;
     }
-
     private void sortArray(int[] nums, int l, int r) {
 
         if (l >= r) {
             return;
         }
 
-        int mid = (l + r) / 2;
+        int mid = (l + r) >> 1;
         sortArray(nums, l, mid);
         sortArray(nums, mid + 1, r);
 
@@ -29,10 +27,10 @@ public class Solution912 {
                 temp[cnt++] = nums[j++];
             }
         }
-        if (i <= mid) {
+        while (i <= mid) {
             temp[cnt++] = nums[i++];
         }
-        if (j <= r) {
+        while (j <= r) {
             temp[cnt++] = nums[j++];
         }
         for (int k = 0; k < r - l + 1; k++) {
@@ -42,7 +40,7 @@ public class Solution912 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {5, 2, 3, 1};
+        int[] nums = {-2,3,-5};
         int[] ints = new Solution912().sortArray(nums);
         for (int i : ints) {
             System.out.println(i);
