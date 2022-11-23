@@ -3,16 +3,6 @@ package leet.code.interview;
 
 import java.util.HashSet;
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-        next = null;
-    }
-}
-
 public class Solution0207 {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         HashSet<ListNode> visited = new HashSet<>();

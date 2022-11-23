@@ -1,16 +1,8 @@
 package leet.code.interview;
 
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-}
-
 public class Solution0205 {
+
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode head = null, tail = null;
         int curr = 0;
@@ -38,4 +30,5 @@ public class Solution0205 {
         }
         return head;
     }
+
 }
