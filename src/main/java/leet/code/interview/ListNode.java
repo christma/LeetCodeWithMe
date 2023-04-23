@@ -2,10 +2,11 @@ package leet.code.interview;
 
 public class ListNode {
     int val;
-    leet.code.interview.ListNode next;
+    ListNode next;
 
     ListNode(int x) {
         val = x;
+        next = null;
     }
 
 }
