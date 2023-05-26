@@ -9,11 +9,13 @@ public class Solution151 {
         for (int i = split.length-1; i >= 0; i--) {
             if(!split[i].isEmpty()){
                 sb.append(split[i]);
-                sb.append(" ");
+                if(i != 0){
+                    sb.append(" ");
+                }
             }
 
         }
-        return sb.toString().trim();
+        return sb.toString();
     }
 
     public static void main(String[] args) {
