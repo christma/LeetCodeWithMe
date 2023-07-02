@@ -2,6 +2,29 @@ package dynamic;
 
 public class CardsInLine {
 
+    public static int win3(int[] arr) {
+        int N = arr.length;
+        int[][] fmap = new int[N][N];
+        int[][] gmap = new int[N][N];
+        for (int i = 0; i < N; i++) {
+            fmap[i][i] = arr[i];
+        }
+
+        for (int startCol = 1; startCol < N; startCol++) {
+            int L = 0;
+            int R = startCol;
+            while (R < N) {
+                fmap[L][R] = Math.max(arr[L] + gmap[L + 1][R], arr[R] + gmap[L][R - 1]);
+                gmap[L][R] = Math.min(fmap[L + 1][R], fmap[L][R - 1]);
+                L++;
+                R++;
+            }
+        }
+        return Math.max(fmap[0][N - 1], gmap[0][N - 1]);
+
+    }
+
+
     public static int win2(int[] arr) {
         int len = arr.length;
         int[][] fmap = new int[len][len];
@@ -79,8 +102,9 @@ public class CardsInLine {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 2, 3, 4, 5, 6};
+        int[] arr = new int[]{50, 100, 20, 10};
         System.out.println(win1(arr));
         System.out.println(win2(arr));
+        System.out.println(win3(arr));
     }
 }
