@@ -92,6 +92,12 @@ public class CardsInLine {
         return Math.max(p1, p2);
     }
 
+
+
+
+
+
+
     public static int g(int[] arr, int L, int R) {
         if (L == R) {
             return 0;
