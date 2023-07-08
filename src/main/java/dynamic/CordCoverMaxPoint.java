@@ -44,4 +44,9 @@ public class CordCoverMaxPoint {
     }
 
 
+    public static void main(String[] args) {
+        int [] arr = new int[]{1,3,5,6,7,9};
+        System.out.println(maxPoint1(arr, 4));
+        System.out.println(maxPoint2(arr, 4));
+    }
 }
