@@ -22,6 +22,12 @@ public class Knapstack {
         return Math.max(p1, p2);
     }
 
+
+
+
+
+
+
     private static int dp(int[] w, int[] v, int bag) {
         int N = w.length;
         int[][] dp = new int[N + 1][bag + 1];
