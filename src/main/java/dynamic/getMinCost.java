@@ -18,7 +18,6 @@ public class getMinCost {
         }
         int p1 = A[ai] + zuo(A, B, ai + 1, bi);
         int p2 = B[bi] + zuo(A, B, ai, bi + 1);
-        //int p3 = A[ai] + B[bi] + zuo(A, B, ai + 1, bi + 1);
         int p4 = Math.abs(A[ai] - B[bi]) + zuo(A, B, ai + 1, bi + 1);
         return Math.min(p1, Math.min(p2, p4));
 
