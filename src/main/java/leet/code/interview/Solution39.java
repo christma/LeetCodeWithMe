@@ -37,4 +37,13 @@ public class Solution39 {
 
     }
 
+    public static void main(String[] args) {
+        int[] candidates = new int[]{1, 2, 3, 4, 5, 6};
+        int target = 6;
+        List<List<Integer>> lists = new Solution39().combinationSum(candidates, target);
+        for (List<Integer> list : lists) {
+            System.out.println(list);
+        }
+    }
+
 }
