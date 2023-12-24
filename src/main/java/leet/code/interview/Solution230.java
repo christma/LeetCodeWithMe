@@ -25,4 +25,5 @@ public class Solution230 {
         }
         return root.val;
     }
+
 }
