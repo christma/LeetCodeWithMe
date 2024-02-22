@@ -7,7 +7,7 @@ package leet.code.interview;
  */
 
 public class Solution889 {
-    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
-
-    }
+//    public TreeNode constructFromPrePost(int[] preorder, int[] postorder) {
+//
+//    }
 }
