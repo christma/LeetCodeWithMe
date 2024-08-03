@@ -13,3 +13,30 @@
 ### 运行时常量池
 ### 本地方法栈
     在JVM中用来支持native 方法执行的栈就是 本地方法栈
+
+
+
+## 堆内存
+    Java堆的结构
+    新生代：Eden space 和 from space 和 to Space（存活区）
+    老年代：
+
+    新生代用来春芳新分配的对象，新生代中经过垃圾回收，没有回收掉的对象会被复制到老年代
+
+
+Trace跟踪参数：
+    打印GC的简要信息：-Xlog:gc
+    指定GClog的位置：-Xlog:gc:filename;
+    每次GC后，打印堆的信息：-Xlog：gc+heap=debug
+    GC日志格式：G1
+        GC发生的事件
+        日志级别信息和日志类型标记
+        GC识别号
+        GC的类型和说明GC的原因
+        容量：GC前容量-》GC后的容量（该区域总容量）
+Java 内存分配的参数：
+    Xms，初始堆的大小，默认物理内存的1/64  1024的倍数
+    Xmx，最大堆的大小，默认是物理内存的1/4 1024的倍数
+    Xmn：新生代大小，默认是整个堆的3/8，推荐整个堆 25%-50%
+
+    -XX:HeapDumpOnOutOfMemoryError:OOM时导出文件
